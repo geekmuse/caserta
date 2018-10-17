@@ -11,15 +11,6 @@ resource "google_bigquery_dataset" "caserta" {
   default_table_expiration_ms = 3600000
 }
 
-resource "google_bigquery_table" "caserta" {
-  dataset_id = "${google_bigquery_dataset.caserta.dataset_id}"
-  table_id   = "bar"
-
-  time_partitioning {
-    type = "DAY"
-  }
-}
-
 resource "null_resource" "datalab_setup" {
   provisioner "local-exec" {
     command     = "./datalab-setup.sh"

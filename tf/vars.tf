@@ -12,3 +12,18 @@ variable "local_gcloud_bin_path" {
   description = "Local gcloud bin PATH"
   default     = "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin"
 }
+
+variable "default_region" {
+  description = "Google region"
+  default     = "us-central1"
+}
+
+variable "default_resource_name" {
+  description = "Generic resource name"
+  default     = "bsc-caserta-datatest"
+}
+
+variable "default_location" {
+  description = "Default Google resource location"
+  default     = "US"
+}
